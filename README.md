@@ -1,3 +1,3 @@
 # info-playground-martinavelardi
-_ Velardi Martina 4^B inf _
+_Velardi Martina 4^B inf_
 ### Esercizi di informatica svolti in classe
