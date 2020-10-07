@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace multiform01
@@ -41,6 +34,23 @@ namespace multiform01
             Form2 f2b = new Form2(txtPassata); // richiamo il costruttore Form2 che carica tutti i componenti
             f2b.Text = "Form2 con passaggio di TextBox";
             f2b.Show();  // visualizzo la form
+        }
+
+        private void btnFormModale_Click(object sender, EventArgs e)
+        {
+            FormModale fm = new FormModale();
+            if (fm.ShowDialog() == DialogResult.OK) // ferma il codice finché non viene chiusa
+            {
+                txtNomeFM.Text = fm.nome;
+                txtEtaFM.Text = fm.eta;
+                MessageBox.Show("Hai premuto OK!");
+            }
+            else
+            {
+                txtNomeFM.Text = "";
+                txtEtaFM.Text = "";
+                MessageBox.Show("Hai premuto annulla!");
+            }
         }
     }
 }
