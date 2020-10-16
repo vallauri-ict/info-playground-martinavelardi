@@ -5,19 +5,28 @@ namespace multiform04_preparazione_verifica
 {
     public partial class FormFiglia : Form
     {
-        public TextBox txtModifica;
+        private TextBox txtPadre;
+        private string txtValue;    // incapsula
         public FormFiglia()
         {
             InitializeComponent();
         }
-        public FormFiglia(TextBox txtModifica)
+        public FormFiglia(TextBox txtPadre)
         {
             InitializeComponent();
-            this.txtModifica = txtModifica;
+            this.txtPadre = txtPadre;
         }
+
+        public string TxtValue { 
+            get => txtValue;
+            set { txtValue = value;
+                txtPadre.Text = txtValue;
+            } 
+        }
+
         private void btnModificaFF_Click(object sender, EventArgs e)
         {
-            txtModifica.Text = txtFormFiglia.Text;
+            txtPadre.Text = txtFormFiglia.Text;
         }
     }
 }

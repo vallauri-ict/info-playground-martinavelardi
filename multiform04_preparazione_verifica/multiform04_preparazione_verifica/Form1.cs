@@ -5,7 +5,7 @@ namespace multiform04_preparazione_verifica
 {
     public partial class Form1 : Form
     {
-        public TextBox txtModificato;
+        FormFiglia ff;
         public Form1()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace multiform04_preparazione_verifica
 
         private void newFigliaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormFiglia ff = new FormFiglia(txtModifica);
+            ff = new FormFiglia(txtModifica);   // passo la textbox alla form figlia
             ff.Text = "Form figlia";
             ff.Show();
             toolStripStatusLbl.Text = "Form figlia";
@@ -51,7 +51,7 @@ namespace multiform04_preparazione_verifica
 
         private void btnModifica_Click(object sender, EventArgs e)
         {
-            
+            ff.TxtValue = txtModifica.Text; // richiama il set di txtValue
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
