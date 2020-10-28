@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace OOP01
 {
@@ -16,14 +11,17 @@ namespace OOP01
         public Color colore;
 
         // "genera tutto" --> "deseleziona tutto" --> "ok"
-        public Rectangle()  // costruttore, deve essere scritto senza specificare cosa ritorna
+        public Rectangle() : this(1)  // costruttore, deve essere scritto senza specificare cosa ritorna
         {
             // assegno dei valori ai campi private
             //side1 = 1;
             //side2 = 1;
             descrizione = "Sono un rettangolo";
         }
+        public Rectangle(int l) : this(l, l)
+        {
 
+        }
         public Rectangle(int baseRettangolo, int altezzaRettangolo)
         {
             side1 = baseRettangolo;

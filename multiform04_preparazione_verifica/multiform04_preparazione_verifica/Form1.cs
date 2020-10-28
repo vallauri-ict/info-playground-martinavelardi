@@ -51,7 +51,15 @@ namespace multiform04_preparazione_verifica
 
         private void btnModifica_Click(object sender, EventArgs e)
         {
-            ff.TxtValue = txtModifica.Text; // richiama il set di txtValue
+            // catturo l'eccezione
+            try
+            {
+                ff.TxtValue = txtModifica.Text; // richiama il set di txtValue
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

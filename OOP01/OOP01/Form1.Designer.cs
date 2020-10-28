@@ -33,6 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtAltezza = new System.Windows.Forms.TextBox();
             this.btnCreaRettangolo = new System.Windows.Forms.Button();
+            this.btnCreaFattura = new System.Windows.Forms.Button();
+            this.btnNFattura = new System.Windows.Forms.Button();
+            this.btnClasseStatica = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,11 +80,44 @@
             this.btnCreaRettangolo.UseVisualStyleBackColor = true;
             this.btnCreaRettangolo.Click += new System.EventHandler(this.btnCreaRettangolo_Click);
             // 
+            // btnCreaFattura
+            // 
+            this.btnCreaFattura.Location = new System.Drawing.Point(221, 13);
+            this.btnCreaFattura.Name = "btnCreaFattura";
+            this.btnCreaFattura.Size = new System.Drawing.Size(75, 23);
+            this.btnCreaFattura.TabIndex = 5;
+            this.btnCreaFattura.Text = "Crea fattura";
+            this.btnCreaFattura.UseVisualStyleBackColor = true;
+            this.btnCreaFattura.Click += new System.EventHandler(this.btnCreaFattura_Click);
+            // 
+            // btnNFattura
+            // 
+            this.btnNFattura.Location = new System.Drawing.Point(204, 42);
+            this.btnNFattura.Name = "btnNFattura";
+            this.btnNFattura.Size = new System.Drawing.Size(92, 23);
+            this.btnNFattura.TabIndex = 6;
+            this.btnNFattura.Text = "Numero fattura";
+            this.btnNFattura.UseVisualStyleBackColor = true;
+            this.btnNFattura.Click += new System.EventHandler(this.btnNFattura_Click);
+            // 
+            // btnClasseStatica
+            // 
+            this.btnClasseStatica.Location = new System.Drawing.Point(373, 9);
+            this.btnClasseStatica.Name = "btnClasseStatica";
+            this.btnClasseStatica.Size = new System.Drawing.Size(86, 23);
+            this.btnClasseStatica.TabIndex = 7;
+            this.btnClasseStatica.Text = "Classe statica";
+            this.btnClasseStatica.UseVisualStyleBackColor = true;
+            this.btnClasseStatica.Click += new System.EventHandler(this.btnClasseStatica_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 119);
+            this.ClientSize = new System.Drawing.Size(471, 149);
+            this.Controls.Add(this.btnClasseStatica);
+            this.Controls.Add(this.btnNFattura);
+            this.Controls.Add(this.btnCreaFattura);
             this.Controls.Add(this.btnCreaRettangolo);
             this.Controls.Add(this.txtAltezza);
             this.Controls.Add(this.label2);
@@ -101,6 +137,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAltezza;
         private System.Windows.Forms.Button btnCreaRettangolo;
+        private System.Windows.Forms.Button btnCreaFattura;
+        private System.Windows.Forms.Button btnNFattura;
+        private System.Windows.Forms.Button btnClasseStatica;
     }
 }
 

@@ -17,11 +17,22 @@ namespace multiform04_preparazione_verifica
             this.txtPadre = txtPadre;
         }
 
-        public string TxtValue { 
+        public string TxtValue
+        {
             get => txtValue;
-            set { txtValue = value;
-                txtPadre.Text = txtValue;
-            } 
+            set
+            {
+                if (value != "")
+                {
+                    txtValue = value;
+                    txtFormFiglia.Text = txtValue;
+                }
+                else
+                {
+                    // genero una nuova eccezione
+                    throw new Exception("Compilare il campo");
+                }
+            }
         }
 
         private void btnModificaFF_Click(object sender, EventArgs e)
