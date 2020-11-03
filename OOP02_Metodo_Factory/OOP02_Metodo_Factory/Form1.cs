@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OOP02_Metodo_Factory
@@ -20,7 +13,7 @@ namespace OOP02_Metodo_Factory
         private void btnCreaQuadrato_Click(object sender, EventArgs e)
         {
             Quadrato q;
-            if (txtLatoQuadrato.Text!="")
+            if (txtLatoQuadrato.Text != "")
             {
                 try
                 {

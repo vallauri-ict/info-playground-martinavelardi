@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OOP04_Classe_Singleton_Coda
@@ -15,6 +8,27 @@ namespace OOP04_Classe_Singleton_Coda
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnInserisciElemento_Click(object sender, EventArgs e)
+        {
+            if (txtElemento.Text != "")
+            {
+                SingletonQueue s = SingletonQueue.GetSingletonQueue();
+                // s.coda non si può fare perché coda non è statica e quindi è accessibile soltanto all'interno della classe SingletonQueue
+                s.accodaElemento(txtElemento.Text);
+                txtElemento.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Devi inserire un valore nella textbox per inserirlo nella coda.");
+            }
+        }
+
+        private void btnStampaElemento_Click(object sender, EventArgs e)
+        {
+            SingletonQueue s = SingletonQueue.GetSingletonQueue();
+            s.stampaElemento();
         }
     }
 }

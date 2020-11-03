@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP02_Metodo_Factory
 {
@@ -16,9 +12,9 @@ namespace OOP02_Metodo_Factory
             this.lato = lato;
         }
 
-        public static Quadrato creaQuadrato(int lato) 
+        public static Quadrato creaQuadrato(int lato)
         {
-            if (lato<=0)
+            if (lato <= 0)
             {
                 throw new Exception("Il lato del quadrato deve essere > di 0");
             }
