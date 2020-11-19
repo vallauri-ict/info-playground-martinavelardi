@@ -24,6 +24,9 @@ namespace dictionary01
         }
         public int i = 0;
         Dictionary<int, Libro> dizionarioLibri = new Dictionary<int, Libro>();
+        // tabella di hash
+        // usato quando devo fare delle ricerche rapide
+        // da una chiave puoi tirare fuori altri dati, come quando fai le ricerche su un dizionario che cerchi una lettera e ti compaiono tante parole
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -37,6 +40,8 @@ namespace dictionary01
 
         private void btnVisualizza_Click(object sender, EventArgs e)
         {
+            // le strutture si possono scorrere con un foreach perché implementano delle interfacce ("classe" in cui sono presenti solo le firme dei metodi) iCollection
+
             // stampa gli indici degli elementi presenti all'interno di dizionarioLibro
             foreach (var key in dizionarioLibri.Keys)
             {
