@@ -36,11 +36,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtEtà = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvVoti = new System.Windows.Forms.DataGridView();
             this.btnInserisci = new System.Windows.Forms.Button();
             this.txtVoto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVoti)).BeginInit();
+            this.listStudenti = new System.Windows.Forms.ListView();
+            this.btnAggiungiVoto = new System.Windows.Forms.Button();
+            this.btnVisualizza = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -107,17 +108,9 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Età:";
             // 
-            // dgvVoti
-            // 
-            this.dgvVoti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVoti.Location = new System.Drawing.Point(180, 13);
-            this.dgvVoti.Name = "dgvVoti";
-            this.dgvVoti.Size = new System.Drawing.Size(598, 150);
-            this.dgvVoti.TabIndex = 8;
-            // 
             // btnInserisci
             // 
-            this.btnInserisci.Location = new System.Drawing.Point(16, 143);
+            this.btnInserisci.Location = new System.Drawing.Point(17, 143);
             this.btnInserisci.Name = "btnInserisci";
             this.btnInserisci.Size = new System.Drawing.Size(157, 23);
             this.btnInserisci.TabIndex = 9;
@@ -127,7 +120,7 @@
             // 
             // txtVoto
             // 
-            this.txtVoto.Location = new System.Drawing.Point(74, 117);
+            this.txtVoto.Location = new System.Drawing.Point(73, 202);
             this.txtVoto.Name = "txtVoto";
             this.txtVoto.Size = new System.Drawing.Size(100, 20);
             this.txtVoto.TabIndex = 11;
@@ -135,21 +128,52 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 117);
+            this.label5.Location = new System.Drawing.Point(41, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Voto:";
             // 
+            // listStudenti
+            // 
+            this.listStudenti.HideSelection = false;
+            this.listStudenti.Location = new System.Drawing.Point(180, 14);
+            this.listStudenti.Name = "listStudenti";
+            this.listStudenti.Size = new System.Drawing.Size(276, 152);
+            this.listStudenti.TabIndex = 12;
+            this.listStudenti.UseCompatibleStateImageBehavior = false;
+            this.listStudenti.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnAggiungiVoto
+            // 
+            this.btnAggiungiVoto.Location = new System.Drawing.Point(180, 200);
+            this.btnAggiungiVoto.Name = "btnAggiungiVoto";
+            this.btnAggiungiVoto.Size = new System.Drawing.Size(157, 23);
+            this.btnAggiungiVoto.TabIndex = 13;
+            this.btnAggiungiVoto.Text = "AGGIUNGI VOTO";
+            this.btnAggiungiVoto.UseVisualStyleBackColor = true;
+            // 
+            // btnVisualizza
+            // 
+            this.btnVisualizza.Location = new System.Drawing.Point(462, 14);
+            this.btnVisualizza.Name = "btnVisualizza";
+            this.btnVisualizza.Size = new System.Drawing.Size(157, 23);
+            this.btnVisualizza.TabIndex = 14;
+            this.btnVisualizza.Text = "VISUALIZZA STUDENTE";
+            this.btnVisualizza.UseVisualStyleBackColor = true;
+            this.btnVisualizza.Click += new System.EventHandler(this.btnVisualizza_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 187);
+            this.ClientSize = new System.Drawing.Size(835, 234);
+            this.Controls.Add(this.btnVisualizza);
+            this.Controls.Add(this.btnAggiungiVoto);
+            this.Controls.Add(this.listStudenti);
             this.Controls.Add(this.txtVoto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnInserisci);
-            this.Controls.Add(this.dgvVoti);
             this.Controls.Add(this.txtEtà);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSesso);
@@ -161,7 +185,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVoti)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,10 +200,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEtà;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvVoti;
         private System.Windows.Forms.Button btnInserisci;
         private System.Windows.Forms.TextBox txtVoto;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListView listStudenti;
+        private System.Windows.Forms.Button btnAggiungiVoto;
+        private System.Windows.Forms.Button btnVisualizza;
     }
 }
 

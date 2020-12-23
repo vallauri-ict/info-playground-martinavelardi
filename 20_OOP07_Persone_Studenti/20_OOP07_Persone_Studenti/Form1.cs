@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace _20_OOP07_Persone_Studenti
@@ -9,20 +10,36 @@ namespace _20_OOP07_Persone_Studenti
         {
             InitializeComponent();
         }
+        List<Studente> lstStudenti = new List<Studente>();
         private void btnInserisci_Click(object sender, EventArgs e)
         {
-            dgvVoti.Rows.Add(txtNome.Text,txtCognome.Text,txtSesso.Text,txtEtà.Text,txtVoto.Text);
+            Studente s = new Studente();
+            s.SetAttributes(txtNome.Text, txtCognome.Text, txtSesso.Text, Convert.ToInt32(txtEtà.Text));
+            lstStudenti.Add(s);
+            listStudenti.Items.Add(s.GetCognome());
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dgvVoti.ColumnCount = 5;
-            dgvVoti.RowHeadersVisible = false;
-            dgvVoti.Columns[0].Name = "Nome";
-            dgvVoti.Columns[1].Name = "Cognome";
-            dgvVoti.Columns[2].Name = "Sesso";
-            dgvVoti.Columns[3].Name = "Età";
-            dgvVoti.Columns[4].Name = "Media Voti";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //string cognome = listStudenti.SelectedItems[0].Text;
+            foreach (Studente i in lstStudenti)
+            {
+                if (i.GetCognome()== listStudenti.SelectedItems[0].Text)
+                {
+                    i.voti.Add(Convert.ToInt32(txtVoto.Text));
+                }
+            }
+        }
+
+        private void btnVisualizza_Click(object sender, EventArgs e)
+        {
+            Studente s = new Studente();
+            s = lstStudenti.Find(stud=> stud.GetCognome()==listStudenti.SelectedItems[0].Text);
+            MessageBox.Show($"La media dello studente {s.GetCognome()} {s.GetNome()} è: {s.Media()}");
         }
     }
 }

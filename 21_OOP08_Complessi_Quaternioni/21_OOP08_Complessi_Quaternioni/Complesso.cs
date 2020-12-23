@@ -5,33 +5,26 @@ namespace _21_OOP08_Complessi_Quaternoni
 {
     class Complesso
     {
-        private double reale;
-        private double immaginario;
+        private double reale=0;
+        private double immaginario=0;
 
-        public Complesso()
+        public Complesso():this(1)
         {
-
         }
-        public Complesso(double reale)
+        public Complesso(double immaginario):this(1,immaginario)
         {
-            this.reale = reale;
         }
         public Complesso(double reale, double immaginario)
         {
-            this.reale = reale;
-            this.immaginario = immaginario;
+            Immaginario = immaginario;
+            Reale = reale;
         }
-        public double GetReale()
-        {
-            return this.reale;
-        }
-        public double GetImmaginario()
-        {
-            return this.immaginario;
-        }
+        public double Reale { get => reale; set => reale = value; }
+        public double Immaginario { get => immaginario; set => immaginario = value; }
         public double Modulo(double reale, double immaginario)
         {
-            return Math.Sqrt((reale * reale) + (2 * reale * immaginario) + (immaginario * immaginario));
+            double somma = Math.Pow(Reale, 2) + Math.Pow(Immaginario, 2);
+            return Math.Sqrt(somma);
         }
         public void Coniugato(double immaginario)
         {
