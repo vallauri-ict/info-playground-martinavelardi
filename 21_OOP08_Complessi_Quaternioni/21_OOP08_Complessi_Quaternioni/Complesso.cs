@@ -28,7 +28,7 @@ namespace _21_OOP08_Complessi_Quaternoni
         }
         public void Coniugato(double immaginario)
         {
-            Complex.Conjugate(immaginario);
+            immaginario = -immaginario;
         }
     }
 }
