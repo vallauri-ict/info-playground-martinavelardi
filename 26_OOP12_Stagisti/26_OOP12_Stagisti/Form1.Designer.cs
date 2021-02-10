@@ -215,6 +215,7 @@ namespace _26_OOP12_Stagisti
             this.btnInserisci.TabIndex = 16;
             this.btnInserisci.Text = "INSERISCI";
             this.btnInserisci.UseVisualStyleBackColor = true;
+            this.btnInserisci.Click += new System.EventHandler(this.btnInserisci_Click);
             // 
             // btnRicercaAzienda
             // 
@@ -224,6 +225,7 @@ namespace _26_OOP12_Stagisti
             this.btnRicercaAzienda.TabIndex = 17;
             this.btnRicercaAzienda.Text = "RICERCA AZIENDA";
             this.btnRicercaAzienda.UseVisualStyleBackColor = true;
+            this.btnRicercaAzienda.Click += new System.EventHandler(this.btnRicercaAzienda_Click);
             // 
             // dgvStudenti
             // 
@@ -241,6 +243,7 @@ namespace _26_OOP12_Stagisti
             this.btnElimina.TabIndex = 19;
             this.btnElimina.Text = "ELIMINA";
             this.btnElimina.UseVisualStyleBackColor = true;
+            this.btnElimina.Click += new System.EventHandler(this.btnElimina_Click);
             // 
             // txtPosizione
             // 
