@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28_interfaccia02_Interfaccia_IComparable", "28_interfaccia02_Interfaccia_IComparable\28_interfaccia02_Interfaccia_IComparable.csproj", "{8ACF4A02-FB78-4BA1-B52B-D6D19C18354C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8ACF4A02-FB78-4BA1-B52B-D6D19C18354C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ACF4A02-FB78-4BA1-B52B-D6D19C18354C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ACF4A02-FB78-4BA1-B52B-D6D19C18354C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ACF4A02-FB78-4BA1-B52B-D6D19C18354C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F563B2BD-CE6A-4368-88EE-4A1EE5BE1435}
+	EndGlobalSection
+EndGlobal
