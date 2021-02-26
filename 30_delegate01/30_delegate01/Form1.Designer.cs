@@ -65,6 +65,7 @@ namespace _30_delegate01
             this.btnSottrazione.TabIndex = 2;
             this.btnSottrazione.Text = "-";
             this.btnSottrazione.UseVisualStyleBackColor = true;
+            this.btnSottrazione.Click += new System.EventHandler(this.btnSottrazione_Click);
             // 
             // Form1
             // 

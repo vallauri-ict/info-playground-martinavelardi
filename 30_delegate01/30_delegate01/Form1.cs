@@ -45,5 +45,28 @@ namespace _30_delegate01
             // Richiamo il delegate
             MessageBox.Show("Prodotto = " + op(10, 15));
         }
+
+        private void btnSottrazione_Click(object sender, EventArgs e)
+        {
+            // TERZO METODO istanzio il delegate
+            Operazione op = Sottrazione;
+
+            // Richiamo dif passandogli come parametro il delegate
+            MessageBox.Show("Differenza = " + dif(15, 10, op).ToString());
+        }
+
+        // In base a dove lo richiamo svolge una funzione
+        // (Se lo richiamo nella somma farà a somma, se lo richiamo nella moltiplicazione farà il prodotto, ...)
+        private int dif(int a, int b, Operazione op)
+        {
+            if (a >= b)
+            {
+                return op(a, b);
+            }
+            else
+            {
+                return op(b, a);
+            }
+        }
     }
 }
