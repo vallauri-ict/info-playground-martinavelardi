@@ -29,17 +29,17 @@ namespace _32_delegate03_EsDispense02
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaxValue = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnIncrement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtMaxValue
             // 
-            this.textBox1.Location = new System.Drawing.Point(61, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtMaxValue.Location = new System.Drawing.Point(61, 12);
+            this.txtMaxValue.Name = "txtMaxValue";
+            this.txtMaxValue.Size = new System.Drawing.Size(100, 20);
+            this.txtMaxValue.TabIndex = 0;
             // 
             // btnCreate
             // 
@@ -59,6 +59,7 @@ namespace _32_delegate03_EsDispense02
             this.btnIncrement.TabIndex = 2;
             this.btnIncrement.Text = "Increment";
             this.btnIncrement.UseVisualStyleBackColor = true;
+            this.btnIncrement.Click += new System.EventHandler(this.btnIncrement_Click);
             // 
             // Form1
             // 
@@ -67,7 +68,7 @@ namespace _32_delegate03_EsDispense02
             this.ClientSize = new System.Drawing.Size(226, 129);
             this.Controls.Add(this.btnIncrement);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMaxValue);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -77,7 +78,7 @@ namespace _32_delegate03_EsDispense02
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaxValue;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnIncrement;
     }
