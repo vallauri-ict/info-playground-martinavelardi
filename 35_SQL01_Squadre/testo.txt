@@ -1,0 +1,11 @@
+CREATE TABLE Squadra
+(Id_Squadra CHAR(3) PRIMARY KEY)
+
+CREATE TABLE Giocatori
+(Id_G INT PRIMARY KEY,
+Cognome VARCHAR(15) NOT NULL,
+Sesso CHAR(1) NOT NULL,
+Indirizzo VARCHAR(25),
+Punti INT,
+Cod_Squadra CHAR(3),
+FOREIGN KEY(Cod_Squadra) REFERENCES Squadra(Id_Squadra))
