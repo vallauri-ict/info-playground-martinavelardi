@@ -1,0 +1,57 @@
+// Inserire un record in una tabella
+INSERT INTO Giocatori
+VALUES (1,"Rossi","M","Via Torino 10",4,"Sq1");
+
+// Inserire un record in una tabella con chiave primaria autoincrementale
+INSERT INTO Giocatori (cognome,sesso,indirizzo,punti,codSquadra)
+VALUES ("Verdi","F","Via Torino 15",7,"Sq1");
+
+// Aggiornare 1 record (ci si basa sull'id)
+UPDATE Giocatori
+SET punti=3
+WHERE id=3
+
+// Tutti i record con cognome="Verdi" verranno aggiornati
+UPDATE Giocatori
+SET punti=2
+WHERE cognome="Verdi"
+
+// RImuovere un record da una tabella
+DELETE FROM Giocatori
+WHERE cognome="Verdi"
+
+// Selezionare i record
+SELECT *
+FROM Giocatori
+WHERE sesso="M"
+
+SELECT *
+FROM Giocatori
+WHERE cognome="Rossi"
+AND punti>4
+
+SELECT *
+FROM Giocatori
+WHERE cognome="Rossi"
+OR cognome="Bianchi"
+
+SELECT *
+FROM Giocatori
+WHERE cognome="Rossi"
+and punti BETWEEN 2 and 5
+
+// Tutti i record che contengono la lettera passata
+SELECT *
+FROM Giocatori
+WHERE cognome LIKE 'R*'	// In SQL "%"
+
+// Un qualsiasi carattere al posto del "?"
+SELECT *
+FROM Giocatori
+WHERE cognome LIKE 'R?ssi' // In SQL "_"
+
+// Record ordinati (DESC => decrescente, => crescente)
+SELECT *
+FROM Giocatori
+WHERE cognome LIKE 'R?ssi'
+ORDER BY cognome DESC,punti
