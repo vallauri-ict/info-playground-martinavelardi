@@ -1,0 +1,19 @@
+// Inserire un record
+INSERT INTO Continenti
+(nome) VALUES ('America')
+
+SELECT *
+FROM Continenti, Nazioni
+
+SELECT *
+FROM Continenti, Nazioni
+WHERE Continenti.ID = Nazioni.codContinente
+
+// sono la stessa cosa della query sopra, ma con gli alias
+SELECT *
+FROM Continenti c, Nazioni n
+WHERE c.ID = n.codContinente
+
+SELECT *
+FROM Continenti as c, Nazioni as n
+WHERE c.ID = n.codContinente
